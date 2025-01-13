@@ -60,7 +60,7 @@ export const storeTranslationsToDisk = async (
 			continue
 		}
 
-		for (const namespace of baseNamespaces) {
+		for (const namespace of namespaces) {
 			logger.info(`creating namespace '${locale}/${namespace}' ...`)
 
 			await generateNamespaceTemplate(
