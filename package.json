@@ -1,6 +1,6 @@
 {
 	"name": "typesafe-i18n-fork",
-	"version": "5.26.2",
+	"version": "5.26.3",
 	"description": "A fully type-safe and lightweight internationalization library for all your TypeScript and JavaScript projects.",
 	"author": "ivanhofer",
 	"homepage": "https://github.com/vcanales/typesafe-i18n",
