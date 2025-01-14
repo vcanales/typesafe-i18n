@@ -9,7 +9,11 @@ const test = suite('detector:navigator')
 
 const testDetector = (name: string, languages: string[] | undefined, expected: Locale[]) =>
 	test(`navigator ${name}`, () => {
-		globalThis.navigator = { languages: languages as string[] } as unknown as Navigator
+		// Use Object.defineProperty to mock navigator since it's read-only
+		Object.defineProperty(globalThis, 'navigator', {
+			value: { languages: languages as string[] } as unknown as Navigator,
+			configurable: true,
+		})
 		assert.equal(navigatorDetector(), expected)
 	})
 
